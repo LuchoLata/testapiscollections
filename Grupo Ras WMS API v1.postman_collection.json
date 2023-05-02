@@ -1,0 +1,4935 @@
+{
+	"info": {
+		"_postman_id": "bf8ecc22-b05a-4d49-9125-4bd1c3d3ca80",
+		"name": "Grupo Ras WMS API v1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5078331",
+		"_collection_link": "https://wms-gruporas.postman.co/workspace/My-Workspace~dad6c4b0-0156-47fe-8ebc-d2b69b9cd93f/collection/5078331-bf8ecc22-b05a-4d49-9125-4bd1c3d3ca80?action=share&creator=5078331&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "wms",
+			"item": [
+				{
+					"name": "Returns",
+					"item": [
+						{
+							"name": "status",
+							"item": [
+								{
+									"name": "Return Status",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Returns/status?returnCode=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Returns",
+												"status"
+											],
+											"query": [
+												{
+													"key": "returnCode",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Returns/status?returnCode=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Returns",
+														"status"
+													],
+													"query": [
+														{
+															"key": "returnCode",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"lastUpdated\": \"<dateTime>\",\n  \"returnReferenceCode\": \"<string>\",\n  \"customerCode\": \"<string>\",\n  \"status\": \"ReferenceEnteredSuccessfully\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantityDeclared\": \"<double>\",\n      \"quantityReceived\": \"<double>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantityDeclared\": \"<double>\",\n      \"quantityReceived\": \"<double>\"\n    }\n  ]\n}"
+										},
+										{
+											"name": "Client error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Returns/status?returnCode=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Returns",
+														"status"
+													],
+													"query": [
+														{
+															"key": "returnCode",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Returns/status?returnCode=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Returns",
+														"status"
+													],
+													"query": [
+														{
+															"key": "returnCode",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Returns/status?returnCode=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Returns",
+														"status"
+													],
+													"query": [
+														{
+															"key": "returnCode",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Server error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Returns/status?returnCode=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Returns",
+														"status"
+													],
+													"query": [
+														{
+															"key": "returnCode",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/wms/Returns",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"customerCode\": \"<string>\",\n  \"originalOrderCode\": \"<string>\",\n  \"requestCode\": \"<string>\",\n  \"pickupAddress\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/wms/Returns",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Returns"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"originalOrderCode\": \"<string>\",\n  \"requestCode\": \"<string>\",\n  \"pickupAddress\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Returns",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Returns"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"originalOrderCode\": \"<string>\",\n  \"requestCode\": \"<string>\",\n  \"pickupAddress\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Returns",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Returns"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"originalOrderCode\": \"<string>\",\n  \"requestCode\": \"<string>\",\n  \"pickupAddress\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Returns",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Returns"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"originalOrderCode\": \"<string>\",\n  \"requestCode\": \"<string>\",\n  \"pickupAddress\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Returns",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Returns"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"originalOrderCode\": \"<string>\",\n  \"requestCode\": \"<string>\",\n  \"pickupAddress\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Returns",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Returns"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "ReceptionSchedule",
+					"item": [
+						{
+							"name": "detail",
+							"item": [
+								{
+									"name": "Get Receptions Schedule Detail",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/ReceptionSchedule/detail?schedule=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"ReceptionSchedule",
+												"detail"
+											],
+											"query": [
+												{
+													"key": "schedule",
+													"value": "<integer>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/ReceptionSchedule/detail?schedule=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"ReceptionSchedule",
+														"detail"
+													],
+													"query": [
+														{
+															"key": "schedule",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"receptionSchedule\": \"<string>\",\n    \"product\": \"<string>\",\n    \"productDescription\": \"<string>\",\n    \"batch\": \"<string>\",\n    \"quantitySchedule\": \"<integer>\",\n    \"crossDocking\": \"<double>\",\n    \"quantityRecived\": \"<integer>\"\n  },\n  {\n    \"receptionSchedule\": \"<string>\",\n    \"product\": \"<string>\",\n    \"productDescription\": \"<string>\",\n    \"batch\": \"<string>\",\n    \"quantitySchedule\": \"<integer>\",\n    \"crossDocking\": \"<double>\",\n    \"quantityRecived\": \"<integer>\"\n  }\n]"
+										},
+										{
+											"name": "Client error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/ReceptionSchedule/detail?schedule=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"ReceptionSchedule",
+														"detail"
+													],
+													"query": [
+														{
+															"key": "schedule",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/ReceptionSchedule/detail?schedule=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"ReceptionSchedule",
+														"detail"
+													],
+													"query": [
+														{
+															"key": "schedule",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/ReceptionSchedule/detail?schedule=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"ReceptionSchedule",
+														"detail"
+													],
+													"query": [
+														{
+															"key": "schedule",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Server error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/ReceptionSchedule/detail?schedule=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"ReceptionSchedule",
+														"detail"
+													],
+													"query": [
+														{
+															"key": "schedule",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/wms/ReceptionSchedule",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/wms/ReceptionSchedule?page=1&itemsPerPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"ReceptionSchedule"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/ReceptionSchedule?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"ReceptionSchedule"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"items\": [\n    {\n      \"receptionSchedule\": \"<integer>\",\n      \"referenceCode\": \"<string>\",\n      \"warehouse\": \"<string>\",\n      \"customer\": \"<string>\",\n      \"customerType\": \"<string>\",\n      \"date\": \"<dateTime>\",\n      \"dateUpdate\": \"<dateTime>\",\n      \"customerDescription\": \"<string>\",\n      \"status\": \"InProcess\"\n    },\n    {\n      \"receptionSchedule\": \"<integer>\",\n      \"referenceCode\": \"<string>\",\n      \"warehouse\": \"<string>\",\n      \"customer\": \"<string>\",\n      \"customerType\": \"<string>\",\n      \"date\": \"<dateTime>\",\n      \"dateUpdate\": \"<dateTime>\",\n      \"customerDescription\": \"<string>\",\n      \"status\": \"Scheduled\"\n    }\n  ],\n  \"pageSize\": \"<integer>\",\n  \"totalItems\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"page\": \"<integer>\"\n}"
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/ReceptionSchedule?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"ReceptionSchedule"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/ReceptionSchedule?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"ReceptionSchedule"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/ReceptionSchedule?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"ReceptionSchedule"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/ReceptionSchedule?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"ReceptionSchedule"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "details",
+							"item": [
+								{
+									"name": "Get Product Details",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Product/details",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Product",
+												"details"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Product/details",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Product",
+														"details"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"volume\": \"<double>\",\n    \"weight\": \"<double>\",\n    \"width\": \"<double>\",\n    \"height\": \"<double>\",\n    \"depth\": \"<double>\",\n    \"product\": \"<string>\",\n    \"quantityReserved\": \"<integer>\",\n    \"quantityAviable\": \"<integer>\",\n    \"company\": \"<string>\",\n    \"productDescription\": \"<string>\",\n    \"stock\": \"<integer>\",\n    \"uom\": \"Pallet\",\n    \"class\": \"NewProduct\",\n    \"family\": \"None\",\n    \"rotation\": \"Lasting\",\n    \"identificationMode\": \"Producto\",\n    \"unitsPerPackage\": \"<integer>\",\n    \"secondDescription\": \"<string>\"\n  },\n  {\n    \"volume\": \"<double>\",\n    \"weight\": \"<double>\",\n    \"width\": \"<double>\",\n    \"height\": \"<double>\",\n    \"depth\": \"<double>\",\n    \"product\": \"<string>\",\n    \"quantityReserved\": \"<integer>\",\n    \"quantityAviable\": \"<integer>\",\n    \"company\": \"<string>\",\n    \"productDescription\": \"<string>\",\n    \"stock\": \"<integer>\",\n    \"uom\": \"Box\",\n    \"class\": \"Corrosive\",\n    \"family\": \"None\",\n    \"rotation\": \"Lasting\",\n    \"identificationMode\": \"Producto\",\n    \"unitsPerPackage\": \"<integer>\",\n    \"secondDescription\": \"<string>\"\n  }\n]"
+										},
+										{
+											"name": "Client error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Product/details",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Product",
+														"details"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Product/details",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Product",
+														"details"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Product/details",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Product",
+														"details"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Server error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Product/details",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Product",
+														"details"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/wms/Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"description\": \"<string>\",\n  \"productCode\": \"<string>\",\n  \"uom\": \"Pallet\",\n  \"class\": \"NewProduct\",\n  \"family\": \"None\",\n  \"rotation\": \"Fifo\",\n  \"barcode\": \"<string>\",\n  \"height\": \"<double>\",\n  \"width\": \"<double>\",\n  \"depth\": \"<double>\",\n  \"grossWeight\": \"<double>\",\n  \"netWeight\": \"<double>\",\n  \"unitsPerPackage\": \"<integer>\",\n  \"identificationMode\": \"Producto\",\n  \"volume\": \"<double>\",\n  \"secondDescription\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/wms/Product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Product"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"<string>\",\n  \"productCode\": \"<string>\",\n  \"uom\": \"Pallet\",\n  \"class\": \"NewProduct\",\n  \"family\": \"None\",\n  \"rotation\": \"Fifo\",\n  \"barcode\": \"<string>\",\n  \"height\": \"<double>\",\n  \"width\": \"<double>\",\n  \"depth\": \"<double>\",\n  \"grossWeight\": \"<double>\",\n  \"netWeight\": \"<double>\",\n  \"unitsPerPackage\": \"<integer>\",\n  \"identificationMode\": \"Producto\",\n  \"volume\": \"<double>\",\n  \"secondDescription\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Product"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"<string>\",\n  \"productCode\": \"<string>\",\n  \"uom\": \"Pallet\",\n  \"class\": \"NewProduct\",\n  \"family\": \"None\",\n  \"rotation\": \"Fifo\",\n  \"barcode\": \"<string>\",\n  \"height\": \"<double>\",\n  \"width\": \"<double>\",\n  \"depth\": \"<double>\",\n  \"grossWeight\": \"<double>\",\n  \"netWeight\": \"<double>\",\n  \"unitsPerPackage\": \"<integer>\",\n  \"identificationMode\": \"Producto\",\n  \"volume\": \"<double>\",\n  \"secondDescription\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Product"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"<string>\",\n  \"productCode\": \"<string>\",\n  \"uom\": \"Pallet\",\n  \"class\": \"NewProduct\",\n  \"family\": \"None\",\n  \"rotation\": \"Fifo\",\n  \"barcode\": \"<string>\",\n  \"height\": \"<double>\",\n  \"width\": \"<double>\",\n  \"depth\": \"<double>\",\n  \"grossWeight\": \"<double>\",\n  \"netWeight\": \"<double>\",\n  \"unitsPerPackage\": \"<integer>\",\n  \"identificationMode\": \"Producto\",\n  \"volume\": \"<double>\",\n  \"secondDescription\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Product"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"<string>\",\n  \"productCode\": \"<string>\",\n  \"uom\": \"Pallet\",\n  \"class\": \"NewProduct\",\n  \"family\": \"None\",\n  \"rotation\": \"Fifo\",\n  \"barcode\": \"<string>\",\n  \"height\": \"<double>\",\n  \"width\": \"<double>\",\n  \"depth\": \"<double>\",\n  \"grossWeight\": \"<double>\",\n  \"netWeight\": \"<double>\",\n  \"unitsPerPackage\": \"<integer>\",\n  \"identificationMode\": \"Producto\",\n  \"volume\": \"<double>\",\n  \"secondDescription\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Product"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"description\": \"<string>\",\n  \"productCode\": \"<string>\",\n  \"uom\": \"Pallet\",\n  \"class\": \"NewProduct\",\n  \"family\": \"None\",\n  \"rotation\": \"Fifo\",\n  \"barcode\": \"<string>\",\n  \"height\": \"<double>\",\n  \"width\": \"<double>\",\n  \"depth\": \"<double>\",\n  \"grossWeight\": \"<double>\",\n  \"netWeight\": \"<double>\",\n  \"unitsPerPackage\": \"<integer>\",\n  \"identificationMode\": \"Producto\",\n  \"volume\": \"<double>\",\n  \"secondDescription\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Product"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "/wms/Product",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientId",
+											"value": "93AA3DFE-4BD2-49F2-80F9-ACCA0C906957",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "https://sso-test.e-gruporas.com/connect/token",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "Token test",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "mundial/access",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "0iN9wO1Y3aW8QOi1cDdDaM5g8bBphh",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/wms/Product?page=1&itemsPerPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Product"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Product?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Product"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"items\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"ubication\": \"<string>\",\n      \"description\": \"<string>\",\n      \"quantity\": \"<integer>\",\n      \"quantityDamaged\": \"<integer>\",\n      \"quantityReserved\": \"<integer>\",\n      \"quantityAviable\": \"<integer>\",\n      \"quantityPrepared\": \"<integer>\",\n      \"quantityUnit\": \"<integer>\",\n      \"customer\": \"<string>\",\n      \"regime\": \"<string>\",\n      \"quality\": \"<string>\",\n      \"subQuality\": \"<string>\",\n      \"status\": \"<string>\",\n      \"volume\": \"<double>\",\n      \"weight\": \"<double>\",\n      \"packages\": \"<integer>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"ubication\": \"<string>\",\n      \"description\": \"<string>\",\n      \"quantity\": \"<integer>\",\n      \"quantityDamaged\": \"<integer>\",\n      \"quantityReserved\": \"<integer>\",\n      \"quantityAviable\": \"<integer>\",\n      \"quantityPrepared\": \"<integer>\",\n      \"quantityUnit\": \"<integer>\",\n      \"customer\": \"<string>\",\n      \"regime\": \"<string>\",\n      \"quality\": \"<string>\",\n      \"subQuality\": \"<string>\",\n      \"status\": \"<string>\",\n      \"volume\": \"<double>\",\n      \"weight\": \"<double>\",\n      \"packages\": \"<integer>\"\n    }\n  ],\n  \"pageSize\": \"<integer>\",\n  \"totalItems\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"page\": \"<integer>\"\n}"
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Product?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Product"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Product?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Product"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Product?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Product"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Product?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Product"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "status",
+							"item": [
+								{
+									"name": "Get Order Status",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders/status?customerCode=<string>&orderCode=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders",
+												"status"
+											],
+											"query": [
+												{
+													"key": "customerCode",
+													"value": "<string>"
+												},
+												{
+													"key": "orderCode",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/status?customerCode=<string>&orderCode=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"status"
+													],
+													"query": [
+														{
+															"key": "customerCode",
+															"value": "<string>"
+														},
+														{
+															"key": "orderCode",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"lastUpdated\": \"<dateTime>\",\n  \"orderCode\": \"<string>\",\n  \"customerCode\": \"<string>\",\n  \"status\": \"Delivered\",\n  \"transportName\": \"<string>\",\n  \"trackingCodes\": [\n    {\n      \"trackingCode\": \"<string>\",\n      \"lastUpdated\": \"<dateTime>\",\n      \"primaryStatus\": \"<string>\",\n      \"secondaryStatus\": \"<string>\",\n      \"isFinal\": \"<boolean>\",\n      \"status\": \"InTransit\",\n      \"lines\": [\n        {\n          \"product\": \"<string>\",\n          \"batch\": \"<string>\",\n          \"quantity\": \"<integer>\"\n        },\n        {\n          \"product\": \"<string>\",\n          \"batch\": \"<string>\",\n          \"quantity\": \"<integer>\"\n        }\n      ]\n    },\n    {\n      \"trackingCode\": \"<string>\",\n      \"lastUpdated\": \"<dateTime>\",\n      \"primaryStatus\": \"<string>\",\n      \"secondaryStatus\": \"<string>\",\n      \"isFinal\": \"<boolean>\",\n      \"status\": \"InTransit\",\n      \"lines\": [\n        {\n          \"product\": \"<string>\",\n          \"batch\": \"<string>\",\n          \"quantity\": \"<integer>\"\n        },\n        {\n          \"product\": \"<string>\",\n          \"batch\": \"<string>\",\n          \"quantity\": \"<integer>\"\n        }\n      ]\n    }\n  ],\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantityRequested\": \"<double>\",\n      \"quantityReserved\": \"<double>\",\n      \"quantityCanceled\": \"<double>\",\n      \"quantitySent\": \"<double>\",\n      \"quantityPrepared\": \"<double>\",\n      \"quantityPackaged\": \"<double>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantityRequested\": \"<double>\",\n      \"quantityReserved\": \"<double>\",\n      \"quantityCanceled\": \"<double>\",\n      \"quantitySent\": \"<double>\",\n      \"quantityPrepared\": \"<double>\",\n      \"quantityPackaged\": \"<double>\"\n    }\n  ]\n}"
+										},
+										{
+											"name": "Client error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/status?customerCode=<string>&orderCode=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"status"
+													],
+													"query": [
+														{
+															"key": "customerCode",
+															"value": "<string>"
+														},
+														{
+															"key": "orderCode",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/status?customerCode=<string>&orderCode=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"status"
+													],
+													"query": [
+														{
+															"key": "customerCode",
+															"value": "<string>"
+														},
+														{
+															"key": "orderCode",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/status?customerCode=<string>&orderCode=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"status"
+													],
+													"query": [
+														{
+															"key": "customerCode",
+															"value": "<string>"
+														},
+														{
+															"key": "orderCode",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Server error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/status?customerCode=<string>&orderCode=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"status"
+													],
+													"query": [
+														{
+															"key": "customerCode",
+															"value": "<string>"
+														},
+														{
+															"key": "orderCode",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "shipped",
+							"item": [
+								{
+									"name": "Get Shipped Orders",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders/shipped?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders",
+												"shipped"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/shipped?page=1&itemsPerPage=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"shipped"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "itemsPerPage",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"items\": [\n    {\n      \"order\": \"<string>\",\n      \"customer\": \"<string>\",\n      \"customerDescription\": \"<string>\",\n      \"descriptionMemo\": \"<string>\",\n      \"quantityOrdered\": \"<integer>\",\n      \"shippedDate\": \"<dateTime>\",\n      \"truck\": \"<integer>\",\n      \"truckLicencePlate\": \"<string>\",\n      \"transportName\": \"<string>\"\n    },\n    {\n      \"order\": \"<string>\",\n      \"customer\": \"<string>\",\n      \"customerDescription\": \"<string>\",\n      \"descriptionMemo\": \"<string>\",\n      \"quantityOrdered\": \"<integer>\",\n      \"shippedDate\": \"<dateTime>\",\n      \"truck\": \"<integer>\",\n      \"truckLicencePlate\": \"<string>\",\n      \"transportName\": \"<string>\"\n    }\n  ],\n  \"pageSize\": \"<integer>\",\n  \"totalItems\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"page\": \"<integer>\"\n}"
+										},
+										{
+											"name": "Client error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/shipped?page=1&itemsPerPage=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"shipped"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "itemsPerPage",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/shipped?page=1&itemsPerPage=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"shipped"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "itemsPerPage",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/shipped?page=1&itemsPerPage=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"shipped"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "itemsPerPage",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Server error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/shipped?page=1&itemsPerPage=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"shipped"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "itemsPerPage",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "detail",
+							"item": [
+								{
+									"name": "/wms/Orders/detail",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders/detail?order=<string>&customer=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders",
+												"detail"
+											],
+											"query": [
+												{
+													"key": "order",
+													"value": "<string>"
+												},
+												{
+													"key": "customer",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/detail?order=<string>&customer=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"detail"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "<string>"
+														},
+														{
+															"key": "customer",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"product\": \"<string>\",\n    \"batch\": \"<string>\",\n    \"quantityRequested\": \"<double>\",\n    \"quantityReserved\": \"<double>\",\n    \"quantityCanceled\": \"<double>\",\n    \"quantitySent\": \"<double>\",\n    \"quantityPrepared\": \"<double>\",\n    \"quantityPackaged\": \"<double>\"\n  },\n  {\n    \"product\": \"<string>\",\n    \"batch\": \"<string>\",\n    \"quantityRequested\": \"<double>\",\n    \"quantityReserved\": \"<double>\",\n    \"quantityCanceled\": \"<double>\",\n    \"quantitySent\": \"<double>\",\n    \"quantityPrepared\": \"<double>\",\n    \"quantityPackaged\": \"<double>\"\n  }\n]"
+										},
+										{
+											"name": "Client error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/detail?order=<string>&customer=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"detail"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "<string>"
+														},
+														{
+															"key": "customer",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/detail?order=<string>&customer=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"detail"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "<string>"
+														},
+														{
+															"key": "customer",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/detail?order=<string>&customer=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"detail"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "<string>"
+														},
+														{
+															"key": "customer",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Server error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: oauth2",
+														"key": "Authorization",
+														"value": "<token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/wms/Orders/detail?order=<string>&customer=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"wms",
+														"Orders",
+														"detail"
+													],
+													"query": [
+														{
+															"key": "order",
+															"value": "<string>"
+														},
+														{
+															"key": "customer",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/wms/Orders",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "clientId",
+											"value": "93AA3DFE-4BD2-49F2-80F9-ACCA0C906957",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "https://sso-test.e-gruporas.com/connect/token",
+											"type": "string"
+										},
+										{
+											"key": "tokenName",
+											"value": "Token test",
+											"type": "string"
+										},
+										{
+											"key": "scope",
+											"value": "mundial/access",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "0iN9wO1Y3aW8QOi1cDdDaM5g8bBphh",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/wms/Orders?page=1&itemsPerPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Orders"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"items\": [\n    {\n      \"lastUpdated\": \"<dateTime>\",\n      \"orderCode\": \"<string>\",\n      \"customerCode\": \"<string>\",\n      \"status\": \"StockReserved\",\n      \"transportName\": \"<string>\",\n      \"trackingCodes\": [\n        {\n          \"trackingCode\": \"<string>\",\n          \"lastUpdated\": \"<dateTime>\",\n          \"primaryStatus\": \"<string>\",\n          \"secondaryStatus\": \"<string>\",\n          \"isFinal\": \"<boolean>\",\n          \"status\": \"Other\",\n          \"lines\": [\n            {\n              \"product\": \"<string>\",\n              \"batch\": \"<string>\",\n              \"quantity\": \"<integer>\"\n            },\n            {\n              \"product\": \"<string>\",\n              \"batch\": \"<string>\",\n              \"quantity\": \"<integer>\"\n            }\n          ]\n        },\n        {\n          \"trackingCode\": \"<string>\",\n          \"lastUpdated\": \"<dateTime>\",\n          \"primaryStatus\": \"<string>\",\n          \"secondaryStatus\": \"<string>\",\n          \"isFinal\": \"<boolean>\",\n          \"status\": \"None\",\n          \"lines\": [\n            {\n              \"product\": \"<string>\",\n              \"batch\": \"<string>\",\n              \"quantity\": \"<integer>\"\n            },\n            {\n              \"product\": \"<string>\",\n              \"batch\": \"<string>\",\n              \"quantity\": \"<integer>\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"lastUpdated\": \"<dateTime>\",\n      \"orderCode\": \"<string>\",\n      \"customerCode\": \"<string>\",\n      \"status\": \"Other\",\n      \"transportName\": \"<string>\",\n      \"trackingCodes\": [\n        {\n          \"trackingCode\": \"<string>\",\n          \"lastUpdated\": \"<dateTime>\",\n          \"primaryStatus\": \"<string>\",\n          \"secondaryStatus\": \"<string>\",\n          \"isFinal\": \"<boolean>\",\n          \"status\": \"InTransit\",\n          \"lines\": [\n            {\n              \"product\": \"<string>\",\n              \"batch\": \"<string>\",\n              \"quantity\": \"<integer>\"\n            },\n            {\n              \"product\": \"<string>\",\n              \"batch\": \"<string>\",\n              \"quantity\": \"<integer>\"\n            }\n          ]\n        },\n        {\n          \"trackingCode\": \"<string>\",\n          \"lastUpdated\": \"<dateTime>\",\n          \"primaryStatus\": \"<string>\",\n          \"secondaryStatus\": \"<string>\",\n          \"isFinal\": \"<boolean>\",\n          \"status\": \"Other\",\n          \"lines\": [\n            {\n              \"product\": \"<string>\",\n              \"batch\": \"<string>\",\n              \"quantity\": \"<integer>\"\n            },\n            {\n              \"product\": \"<string>\",\n              \"batch\": \"<string>\",\n              \"quantity\": \"<integer>\"\n            }\n          ]\n        }\n      ]\n    }\n  ],\n  \"pageSize\": \"<integer>\",\n  \"totalItems\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"page\": \"<integer>\"\n}"
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "/wms/Orders",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"customerCode\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    }\n  ],\n  \"orderCode\": \"<string>\",\n  \"transportNumber\": \"<string>\",\n  \"date\": \"<dateTime>\",\n  \"carrier\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"customerInfo\": {\n    \"description\": \"<string>\",\n    \"address\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"fiscalIdentification\": \"<string>\"\n  },\n  \"deliveryInformation\": {\n    \"recipient\": \"<string>\",\n    \"street\": \"<string>\",\n    \"buildingNumber\": \"<string>\",\n    \"unitNumber\": \"<string>\",\n    \"bis\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"postalCode\": \"<string>\",\n    \"remarks\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"deliveryDate\": \"<dateTime>\",\n    \"deliveryTimeWindow\": \"<string>\"\n  },\n  \"transportName\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/wms/Orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Orders"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    }\n  ],\n  \"orderCode\": \"<string>\",\n  \"transportNumber\": \"<string>\",\n  \"date\": \"<dateTime>\",\n  \"carrier\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"customerInfo\": {\n    \"description\": \"<string>\",\n    \"address\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"fiscalIdentification\": \"<string>\"\n  },\n  \"deliveryInformation\": {\n    \"recipient\": \"<string>\",\n    \"street\": \"<string>\",\n    \"buildingNumber\": \"<string>\",\n    \"unitNumber\": \"<string>\",\n    \"bis\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"postalCode\": \"<string>\",\n    \"remarks\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"deliveryDate\": \"<dateTime>\",\n    \"deliveryTimeWindow\": \"<string>\"\n  },\n  \"transportName\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    }\n  ],\n  \"orderCode\": \"<string>\",\n  \"transportNumber\": \"<string>\",\n  \"date\": \"<dateTime>\",\n  \"carrier\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"customerInfo\": {\n    \"description\": \"<string>\",\n    \"address\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"fiscalIdentification\": \"<string>\"\n  },\n  \"deliveryInformation\": {\n    \"recipient\": \"<string>\",\n    \"street\": \"<string>\",\n    \"buildingNumber\": \"<string>\",\n    \"unitNumber\": \"<string>\",\n    \"bis\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"postalCode\": \"<string>\",\n    \"remarks\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"deliveryDate\": \"<dateTime>\",\n    \"deliveryTimeWindow\": \"<string>\"\n  },\n  \"transportName\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    }\n  ],\n  \"orderCode\": \"<string>\",\n  \"transportNumber\": \"<string>\",\n  \"date\": \"<dateTime>\",\n  \"carrier\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"customerInfo\": {\n    \"description\": \"<string>\",\n    \"address\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"fiscalIdentification\": \"<string>\"\n  },\n  \"deliveryInformation\": {\n    \"recipient\": \"<string>\",\n    \"street\": \"<string>\",\n    \"buildingNumber\": \"<string>\",\n    \"unitNumber\": \"<string>\",\n    \"bis\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"postalCode\": \"<string>\",\n    \"remarks\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"deliveryDate\": \"<dateTime>\",\n    \"deliveryTimeWindow\": \"<string>\"\n  },\n  \"transportName\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    }\n  ],\n  \"orderCode\": \"<string>\",\n  \"transportNumber\": \"<string>\",\n  \"date\": \"<dateTime>\",\n  \"carrier\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"customerInfo\": {\n    \"description\": \"<string>\",\n    \"address\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"fiscalIdentification\": \"<string>\"\n  },\n  \"deliveryInformation\": {\n    \"recipient\": \"<string>\",\n    \"street\": \"<string>\",\n    \"buildingNumber\": \"<string>\",\n    \"unitNumber\": \"<string>\",\n    \"bis\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"postalCode\": \"<string>\",\n    \"remarks\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"deliveryDate\": \"<dateTime>\",\n    \"deliveryTimeWindow\": \"<string>\"\n  },\n  \"transportName\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"productDescription\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"comments\": \"<string>\"\n    }\n  ],\n  \"orderCode\": \"<string>\",\n  \"transportNumber\": \"<string>\",\n  \"date\": \"<dateTime>\",\n  \"carrier\": \"<string>\",\n  \"comments\": \"<string>\",\n  \"customerInfo\": {\n    \"description\": \"<string>\",\n    \"address\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"fiscalIdentification\": \"<string>\"\n  },\n  \"deliveryInformation\": {\n    \"recipient\": \"<string>\",\n    \"street\": \"<string>\",\n    \"buildingNumber\": \"<string>\",\n    \"unitNumber\": \"<string>\",\n    \"bis\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"postalCode\": \"<string>\",\n    \"remarks\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"deliveryDate\": \"<dateTime>\",\n    \"deliveryTimeWindow\": \"<string>\"\n  },\n  \"transportName\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Orders"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Inbound",
+					"item": [
+						{
+							"name": "/wms/Inbound",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"customerCode\": \"<string>\",\n  \"inboundReferenceCode\": \"<string>\",\n  \"documentType\": \"<integer>\",\n  \"supplier\": \"<string>\",\n  \"remarks\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/wms/Inbound",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Inbound"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"inboundReferenceCode\": \"<string>\",\n  \"documentType\": \"<integer>\",\n  \"supplier\": \"<string>\",\n  \"remarks\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Inbound",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Inbound"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"inboundReferenceCode\": \"<string>\",\n  \"documentType\": \"<integer>\",\n  \"supplier\": \"<string>\",\n  \"remarks\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Inbound",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Inbound"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"inboundReferenceCode\": \"<string>\",\n  \"documentType\": \"<integer>\",\n  \"supplier\": \"<string>\",\n  \"remarks\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Inbound",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Inbound"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"inboundReferenceCode\": \"<string>\",\n  \"documentType\": \"<integer>\",\n  \"supplier\": \"<string>\",\n  \"remarks\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Inbound",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Inbound"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"inboundReferenceCode\": \"<string>\",\n  \"documentType\": \"<integer>\",\n  \"supplier\": \"<string>\",\n  \"remarks\": \"<string>\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantity\": \"<double>\",\n      \"remarks\": \"<string>\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Inbound",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Inbound"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "/wms/Inbound",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/wms/Inbound?referenceCode=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Inbound"
+									],
+									"query": [
+										{
+											"key": "referenceCode",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Inbound?referenceCode=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Inbound"
+											],
+											"query": [
+												{
+													"key": "referenceCode",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"inboundReferenceCode\": \"<string>\",\n  \"documentType\": \"<integer>\",\n  \"supplier\": \"<string>\",\n  \"status\": \"ReferenceEnteredSuccessfully\",\n  \"lines\": [\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantityReceived\": \"<double>\",\n      \"quantityDeclared\": \"<double>\"\n    },\n    {\n      \"product\": \"<string>\",\n      \"batch\": \"<string>\",\n      \"quantityReceived\": \"<double>\",\n      \"quantityDeclared\": \"<double>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Inbound?referenceCode=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Inbound"
+											],
+											"query": [
+												{
+													"key": "referenceCode",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Inbound?referenceCode=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Inbound"
+											],
+											"query": [
+												{
+													"key": "referenceCode",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Inbound?referenceCode=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Inbound"
+											],
+											"query": [
+												{
+													"key": "referenceCode",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Inbound?referenceCode=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Inbound"
+											],
+											"query": [
+												{
+													"key": "referenceCode",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Events",
+					"item": [
+						{
+							"name": "/wms/Events",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"url\": \"<string>\",\n  \"apiKey\": \"<string>\",\n  \"basicUser\": \"<string>\",\n  \"basicPassword\": \"<string>\",\n  \"clientId\": \"<string>\",\n  \"clientSecret\": \"<string>\",\n  \"urlToken\": \"<string>\",\n  \"scope\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/wms/Events",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Events"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"url\": \"<string>\",\n  \"apiKey\": \"<string>\",\n  \"basicUser\": \"<string>\",\n  \"basicPassword\": \"<string>\",\n  \"clientId\": \"<string>\",\n  \"clientSecret\": \"<string>\",\n  \"urlToken\": \"<string>\",\n  \"scope\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"url\": \"<string>\",\n  \"apiKey\": \"<string>\",\n  \"basicUser\": \"<string>\",\n  \"basicPassword\": \"<string>\",\n  \"clientId\": \"<string>\",\n  \"clientSecret\": \"<string>\",\n  \"urlToken\": \"<string>\",\n  \"scope\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"url\": \"<string>\",\n  \"apiKey\": \"<string>\",\n  \"basicUser\": \"<string>\",\n  \"basicPassword\": \"<string>\",\n  \"clientId\": \"<string>\",\n  \"clientSecret\": \"<string>\",\n  \"urlToken\": \"<string>\",\n  \"scope\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"url\": \"<string>\",\n  \"apiKey\": \"<string>\",\n  \"basicUser\": \"<string>\",\n  \"basicPassword\": \"<string>\",\n  \"clientId\": \"<string>\",\n  \"clientSecret\": \"<string>\",\n  \"urlToken\": \"<string>\",\n  \"scope\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"url\": \"<string>\",\n  \"apiKey\": \"<string>\",\n  \"basicUser\": \"<string>\",\n  \"basicPassword\": \"<string>\",\n  \"clientId\": \"<string>\",\n  \"clientSecret\": \"<string>\",\n  \"urlToken\": \"<string>\",\n  \"scope\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "/wms/Events",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/wms/Events",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Events"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "/wms/Events",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/wms/Events",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Events"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"eventTypeError\": \"OrderUpdatedEvent\",\n    \"errorMessage\": \"<string>\",\n    \"lastRetry\": \"<dateTime>\",\n    \"retries\": \"<integer>\",\n    \"response\": \"<string>\",\n    \"statusCode\": \"<string>\",\n    \"referenceCode\": \"<string>\"\n  },\n  {\n    \"eventTypeError\": \"InboundUpdatedEvent\",\n    \"errorMessage\": \"<string>\",\n    \"lastRetry\": \"<dateTime>\",\n    \"retries\": \"<integer>\",\n    \"response\": \"<string>\",\n    \"statusCode\": \"<string>\",\n    \"referenceCode\": \"<string>\"\n  }\n]"
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Events"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Customers",
+					"item": [
+						{
+							"name": "/wms/Customers",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"customerCode\": \"<string>\",\n  \"description\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"email\": \"<string>\",\n  \"fiscalIdentification\": \"<string>\",\n  \"type\": \"PRO\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/wms/Customers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Customers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"description\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"email\": \"<string>\",\n  \"fiscalIdentification\": \"<string>\",\n  \"type\": \"PRO\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Customers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"description\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"email\": \"<string>\",\n  \"fiscalIdentification\": \"<string>\",\n  \"type\": \"PRO\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Customers"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"description\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"email\": \"<string>\",\n  \"fiscalIdentification\": \"<string>\",\n  \"type\": \"PRO\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Customers"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"description\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"email\": \"<string>\",\n  \"fiscalIdentification\": \"<string>\",\n  \"type\": \"PRO\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Customers"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"customerCode\": \"<string>\",\n  \"description\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"department\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"email\": \"<string>\",\n  \"fiscalIdentification\": \"<string>\",\n  \"type\": \"PRO\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/wms/Customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Customers"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "/wms/Customers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/wms/Customers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Customers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Customers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"customerCode\": \"<string>\",\n    \"description\": \"<string>\",\n    \"address\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"postalCode\": \"<string>\"\n  },\n  {\n    \"customerCode\": \"<string>\",\n    \"description\": \"<string>\",\n    \"address\": \"<string>\",\n    \"city\": \"<string>\",\n    \"department\": \"<string>\",\n    \"phone\": \"<string>\",\n    \"email\": \"<string>\",\n    \"postalCode\": \"<string>\"\n  }\n]"
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Customers"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Customers"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Customers"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Customers"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Container",
+					"item": [
+						{
+							"name": "Get Containers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/wms/Container?page=1&itemsPerPage=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"wms",
+										"Container"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Container?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Container"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"items\": [\n    {\n      \"container\": \"<string>\",\n      \"type\": \"<string>\",\n      \"status\": \"<integer>\",\n      \"tare\": \"<integer>\",\n      \"booking\": \"<string>\",\n      \"terminalDelivery\": \"<integer>\",\n      \"terminalReturn\": \"<integer>\",\n      \"endReturn\": \"<dateTime>\",\n      \"dateEntry\": \"<dateTime>\"\n    },\n    {\n      \"container\": \"<string>\",\n      \"type\": \"<string>\",\n      \"status\": \"<integer>\",\n      \"tare\": \"<integer>\",\n      \"booking\": \"<string>\",\n      \"terminalDelivery\": \"<integer>\",\n      \"terminalReturn\": \"<integer>\",\n      \"endReturn\": \"<dateTime>\",\n      \"dateEntry\": \"<dateTime>\"\n    }\n  ],\n  \"pageSize\": \"<integer>\",\n  \"totalItems\": \"<integer>\",\n  \"totalPages\": \"<integer>\",\n  \"page\": \"<integer>\"\n}"
+								},
+								{
+									"name": "Client error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Container?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Container"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Container?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Container"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Container?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Container"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: oauth2",
+												"key": "Authorization",
+												"value": "<token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/wms/Container?page=1&itemsPerPage=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"wms",
+												"Container"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "itemsPerPage",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"errorCode\": \"<string>\",\n  \"statusCode\": \"<integer>\",\n  \"stackTrace\": \"<string>\",\n  \"details\": [\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"instance\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "scope",
+				"value": "ras-operations/access",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://sso-test.e-gruporas.com/connect/token",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api-test.e-gruporas.com"
+		}
+	]
+}
